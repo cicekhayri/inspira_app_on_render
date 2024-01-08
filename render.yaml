@@ -1,0 +1,20 @@
+databases:
+  - name: mydb
+    databaseName: mydb
+    user: mydb
+
+services:
+  - type: web
+    name: inspira_app_on_render
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn main:app -k uvicorn.workers.UvicornWorker"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: mydb
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
