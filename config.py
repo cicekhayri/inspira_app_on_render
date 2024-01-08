@@ -10,4 +10,5 @@ uri = os.environ.get("DATABASE_URL", "no-db")
 
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
-    config['SQLALCHEMY_DATABASE_URI'] = uri
+
+config['SQLALCHEMY_DATABASE_URI'] = uri
