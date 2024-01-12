@@ -4,4 +4,4 @@ set -o errexit
 
 pip install -r requirements.txt
 
-python -c "from database import init_db; init_db()"
+inspira migrate users
