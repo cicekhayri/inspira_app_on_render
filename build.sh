@@ -4,4 +4,4 @@ set -o errexit
 
 pip install -r requirements.txt
 
-inspira migrate users
+inspira migrate

@@ -1,6 +1,6 @@
 from database import db_session
 from sqlalchemy.exc import SQLAlchemyError
-from src.users.user import User
+from src.model.user import User
 
 
 class UserRepository:

@@ -3,7 +3,7 @@ from inspira.decorators.path import path
 from inspira.responses import TemplateResponse, HttpResponseRedirect
 from inspira.requests import Request
 
-from src.users.user_service import UserService
+from src.service.user_service import UserService
 
 
 @path("/users")
